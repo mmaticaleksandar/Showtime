@@ -79,6 +79,13 @@ fun App(appCloser: AppCloser?=null) {
 
             //Izavran film
             var selectedMovieId by remember { mutableStateOf<String?>(null) }
+            var moviesScrollIndex by remember {
+                mutableStateOf(0)
+            }
+
+            var moviesScrollOffset by remember {
+                mutableStateOf(0)
+            }
 
             //Detalji store
             val movieDetailStore = remember {
@@ -334,6 +341,12 @@ fun App(appCloser: AppCloser?=null) {
                             },
                             onQuizClick = {
                                 currentScreen = "quiz_setup"
+                            },
+                            initialScrollIndex = moviesScrollIndex,
+                            initialScrollOffset = moviesScrollOffset,
+                            onSaveScrollPosition = { index, offset ->
+                                moviesScrollIndex = index
+                                moviesScrollOffset = offset
                             }
                         )
 

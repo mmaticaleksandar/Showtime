@@ -21,8 +21,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.ImeAction
 import presentation.common.formFieldNavigation
-import androidx.compose.ui.platform.LocalFocusManager
-import presentation.common.formFieldNavigation
+
 
 @Composable
 fun MoviesSearchSection(
@@ -32,7 +31,6 @@ fun MoviesSearchSection(
     onToggleFilters: () -> Unit,
     onIntent: (MoviesIntent) -> Unit
 ) {
-    val focusManager = LocalFocusManager.current
 
     if (isDesktop) {
         DesktopMoviesSearchSection(
