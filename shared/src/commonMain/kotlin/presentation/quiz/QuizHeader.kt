@@ -147,11 +147,11 @@ private fun MobileQuizHeader(
                 modifier = Modifier.weight(1f)
             )
 
-            OutlinedButton(
-                onClick = onAbandonClick
-            ) {
-                Text("Abandon")
-            }
+//            OutlinedButton(
+//                onClick = onAbandonClick
+//            ) {
+//                Text("Abandon")
+//            }
         }
 
         Row(

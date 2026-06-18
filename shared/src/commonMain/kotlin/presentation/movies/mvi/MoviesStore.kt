@@ -128,6 +128,11 @@ class MoviesStore(
                 observeMoviesJob = null
             }
 
+            MoviesIntent.ClearAll -> {
+                reduce(MoviesChange.AllCleared)
+                reloadMovies()
+            }
+
         }
     }
 

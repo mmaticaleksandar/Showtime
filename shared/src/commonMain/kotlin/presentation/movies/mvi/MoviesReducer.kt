@@ -108,6 +108,19 @@ object MoviesReducer {
                     page = 1
                 )
             }
+
+            MoviesChange.AllCleared -> state.copy(
+                query = "",
+                sortBy = "popularity",
+                sortOrder = "desc",
+                minRating = "",
+                minYear = "",
+                maxYear = "",
+                selectedGenreId = null,
+                page = 1,
+                totalPages = null,
+                errorMessage = null
+            )
         }
     }
 }

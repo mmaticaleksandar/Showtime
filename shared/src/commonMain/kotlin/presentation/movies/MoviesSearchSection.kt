@@ -85,7 +85,7 @@ private fun DesktopMoviesSearchSection(
                 }
             ),
             modifier = Modifier
-                .fillMaxWidth()
+                .weight(1f)
                 .formFieldNavigation(
                     focusManager = focusManager,
                     onSubmit = {
@@ -120,7 +120,7 @@ private fun DesktopMoviesSearchSection(
         OutlinedButton(
             onClick = {
                 focusManager.clearFocus()
-                onIntent(MoviesIntent.ClearSearch)
+                onIntent(MoviesIntent.ClearAll)
             },
             enabled = !state.isLoading
         ) {
@@ -201,7 +201,7 @@ private fun MobileMoviesSearchSection(
 
             OutlinedButton(
                 onClick = {
-                    onIntent(MoviesIntent.ClearSearch)
+                    onIntent(MoviesIntent.ClearAll)
                 },
                 enabled = !state.isLoading,
                 modifier = Modifier.weight(1f)

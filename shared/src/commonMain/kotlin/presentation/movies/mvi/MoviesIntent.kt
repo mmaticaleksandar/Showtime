@@ -6,7 +6,7 @@ sealed interface MoviesIntent {
     data object SearchSubmitted : MoviesIntent
 
     data object ClearSearch : MoviesIntent
-
+    data object ClearAll : MoviesIntent
     data object LoadNextPage : MoviesIntent
 
     data class SortByChanged(val value: String) : MoviesIntent

@@ -57,4 +57,6 @@ sealed interface MoviesChange {
     data object FiltersCleared : MoviesChange
 
     data object PrepareForReload : MoviesChange
+
+    data object AllCleared : MoviesChange
 }
